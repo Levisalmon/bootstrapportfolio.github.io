@@ -1,0 +1,123 @@
+﻿@import "Content/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import "Content/fonts.scss";
+@import "Content/nav";
+
+* {
+    font-family:'Raleway';
+}
+
+
+
+#home_wrapper {
+    @extend .container-fluid;
+    background-image: url("http://i.imgur.com/ZN3Kgry.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:100vh;
+    & .name_hero {
+        @extend .row;
+        & .name_holder {
+            @extend .text-center;
+            width:220px;
+            margin:70px auto;
+            display:table;
+            background: linear-gradient(to right, #ff9f3f 25%, #fff549 39%, #a1ff49 70%);            
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: #333;
+            -webkit-text-stroke: 3px transparent;
+            & h1 {
+                color:#bbbbbb;
+                font-size:75px;
+                letter-spacing:15px;
+                & span {
+                    font-family:'BebasNeue Bold';
+                }
+                & .levi {
+                    float:left;
+                }
+                & .salmon {
+                    float:right;
+                    margin-left: 30px;
+                    margin-right:-15px;
+               }
+            }
+        }
+    }
+    & .bio_section {
+        @extend .row;
+        & .bio_box {
+            @extend .col-xs-12, .text-center, .well, .well-sm;
+        }
+    }
+}
+
+#portfolio_wrapper {
+    @extend .container-fluid;
+    & .portfolio_hero {
+        @extend .row, .text-center;
+        & .port_hero_holder {
+            @extend .col-xs-12;
+            margin:60px 0;
+            & h2 {
+                line-height:70%;
+                font-size:50px;
+                white-space:nowrap;
+                & span, small {
+                    font-family:"BebasNeue Regular";
+                }
+            }
+            & .hero_1 {
+                margin-left:20px;
+            }
+            & .hero_plus {
+                font-size:55px;
+                line-height:80%;
+            }
+            & .hero_2 {
+                margin-right:50px;
+            }
+        }
+    }
+    & .port_selector {
+        @extend .row, .text-center;
+        & .port_option {
+            @extend .col-xs-6, .col-xs-offset-3;
+            height: 75px;
+            margin-bottom: 60px;
+            display: table;
+            background-attachment: fixed;
+            background-position: bottom;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius:10px;
+            color:white;
+            border: 3px solid #333;
+            box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.75);
+            &:hover {
+                box-shadow: 0px 5px 25px 3px rgba(0,0,0,0.75);
+                transition:ease-in-out;
+            }
+            & span {
+                font-family:'BebasNeue Regular';
+                background-color: rgba(0, 0, 0, 0.6);
+                padding: 5px 10px;
+                border: 2px solid white;
+            }        
+            & h1 {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            &.design {
+                background-image: url(http://i.imgur.com/jtWvvuy.jpg);
+            }
+            &.photos {
+                background-image: url(http://i.imgur.com/YtNPwWE.jpg);
+            }
+            &.music {
+                background-image: url(http://i.imgur.com/nYtkMMC.jpg);
+            }
+        }
+    }
+}
